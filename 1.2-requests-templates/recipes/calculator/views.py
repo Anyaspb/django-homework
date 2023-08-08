@@ -30,11 +30,11 @@ DATA = {
     # }
 
 def food(request, recipe_name):
-    qty = int(request.GET.get("servings", 1))
+    qty = int(request.GET.get('servings', 1))
     context = {
-        "recipe": DATA[recipe_name]
+        'recipe': DATA[recipe_name]
     }
 
-    for x in context["recipe"]:
-        context["recipe"][x] = context["recipe"][x] * qty
+    for x in context['recipe']:
+        context['recipe'][x] = context['recipe'][x] * qty
     return render(request, 'calculator/index.html', context)
