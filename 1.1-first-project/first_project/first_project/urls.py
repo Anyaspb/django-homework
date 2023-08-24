@@ -29,3 +29,5 @@ urlpatterns = [
     path('workdir/', workdir_view, name='workdir'),
     path('admin/', admin.site.urls),
 ]
+
+#test
