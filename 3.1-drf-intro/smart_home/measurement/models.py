@@ -9,7 +9,7 @@ class Sensor(models.Model):
 
 
 class Measure(models.Model):
-    sensor_id = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name='measure')
+    sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name='measure')
     temperature = models.FloatField()
     date = models.DateTimeField(auto_now_add=True)
 
